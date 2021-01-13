@@ -1,11 +1,9 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
 
 # Project 2 - Operationalizing Machine Learning
 
 
 *This project is part of the Udacity Azure Machine Learning Engineer Nanodegree.* <br>
-The aim of this project is to use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. A pipeline is created and published.<br>
+The aim of this project is to use Azure to configure a cloud-based machine learning production model, deploy it and consume it. Then the workflow is automated by creating and publishing a pipeline.<br>
 
 **Key Steps**
 <ol>
@@ -40,7 +38,7 @@ The a compute cluster was configured for the AutoML run with Standard_DS12_v2 as
 ![Architectural Diagram](./images/best-model.png) 
 
 ### 3. Deploy the Best Model
-In this experiment, the best model obtained used the Voting Ensemble algorithm. The model is deployed and Azure Container Instance and authentication is enabled. Azure Container Instance service uses key-based authentication and is disabled by default. Deploying the best model allows interaction with the HTTP API servie and data can be sent over POST requests.
+In this experiment, the best model obtained used the Voting Ensemble algorithm. The model is deployed using Azure Container Instance and authentication is enabled. Azure Container Instance service uses key-based authentication and is disabled by default. Deploying the best model allows interaction with the HTTP API servie and data can be sent over POST requests.
 
 ![Architectural Diagram](./images/deployment-healthy.png)
 
@@ -64,29 +62,35 @@ Both swagger.sh and serve.py is run with swagger.json being in the same folder. 
 ### 6. Consume Model Enpoints
 The script endpoint.py is used to interact with the deployed model after setting the scoring_uri and the primary key. endpoint.py runs against the API and produces JSON output from the model.
 
-![Architectural Diagram](./images/endpoint-output.png)
+![Screenshot](./images/endpoint-output.png)
 
 Apache Benchmark is used to load-test the deployed model. It shows a lot of metrics including response time for a deployed model. After configuring the authentication keys, benchmark.sh was run. In this experiment, 10 requests were made where none failed. The average time per request was 755.516 ms.
 
-![Architectural Diagram](./images/ab-output-3.png)
+![Screenshot](./images/ab-output-3.png)
 
 ### 7. Create and Publish a Pipeline
 The Jupyter Notebook provided is run after configuring necessary details. <br>
 Pipelines are a great way to automate workflows. Published pipelines allow external services to interact with them so that they can do work more efficiently.
 
-Create a pipeline and run -
+A new pipeline is created with an AutoML step. The pipeline experiment is run and details are displayed using RunDetails widget. The pipeline run overview shows the run status and details. 
 
-![Architectural Diagram](./images/pipeline1.png)
-![Architectural Diagram](./images/pipeline-running.png)
-![Architectural Diagram](./images/pipeline-run-overview.png)
+![Screenshot](./images/pipeline1.png)
+![Screenshot](./images/pipeline-running.png)
+![Screenshot](./images/pipeline-run-overview.png)
 
-Publish the pipeline -
-![Architectural Diagram](./images/published-pipeline-overview.png)
-![Architectural Diagram](./images/published-pipeline-overview-page.png)
-![Architectural Diagram](./images/pipeline-endpoint.png)
+The pipeline is published using the SDK. Once published, the endpoint details are available and the published pipeline overview can be viewed.
+![Screenshot](./images/published-pipeline-overview.png)
+![Screenshot](./images/published-pipeline-overview-page.png)
+![Screenshot](./images/pipeline-endpoint.png)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+Link to the screen recording of the project: 
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
+<ul>
+<li>Apache Benchmark has been used here to load-test the model</li>
+<li>For future projects, creation of Service Principal can be attempted.</li>
+<li>The first part of the project (ie, creation of compute, the AutoML run and deployment) are done through the interface. This can be made to run using the SDK.</li>
+<li>To consume the model, along with using the Python script, a basic UI front-end can be implemented with provisions for entering each parameter and for displaying the response.</li>
+</ul>
