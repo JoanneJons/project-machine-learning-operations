@@ -1,0 +1,50 @@
+Warning: Falling back to use azure cli login credentials.
+If you run your code in unattended mode, i.e., where you can't give a user input, then we recommend to use ServicePrincipalAuthentication or MsiAuthentication.
+Please refer to aka.ms/aml-notebook-auth for different authentication mechanisms in azureml-sdk.
+2021-01-13T06:45:54,867001000+00:00 - rsyslog/run 
+2021-01-13T06:45:54,873032600+00:00 - iot-server/run 
+2021-01-13T06:45:54,886691800+00:00 - gunicorn/run 
+rsyslogd: /azureml-envs/azureml_8eff28b157f42edcd2424a5aae6c8074/lib/libuuid.so.1: no version information available (required by rsyslogd)
+2021-01-13T06:45:54,911296400+00:00 - nginx/run 
+/usr/sbin/nginx: /azureml-envs/azureml_8eff28b157f42edcd2424a5aae6c8074/lib/libcrypto.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_8eff28b157f42edcd2424a5aae6c8074/lib/libcrypto.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_8eff28b157f42edcd2424a5aae6c8074/lib/libssl.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_8eff28b157f42edcd2424a5aae6c8074/lib/libssl.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+/usr/sbin/nginx: /azureml-envs/azureml_8eff28b157f42edcd2424a5aae6c8074/lib/libssl.so.1.0.0: no version information available (required by /usr/sbin/nginx)
+EdgeHubConnectionString and IOTEDGE_IOTHUBHOSTNAME are not set. Exiting...
+2021-01-13T06:45:56,248166600+00:00 - iot-server/finish 1 0
+2021-01-13T06:45:56,267452200+00:00 - Exit code 1 is normal. Not restarting iot-server.
+Starting gunicorn 19.9.0
+Listening at: http://127.0.0.1:31311 (65)
+Using worker: sync
+worker timeout is set to 300
+Booting worker with pid: 98
+SPARK_HOME not set. Skipping PySpark Initialization.
+Generating new fontManager, this may take some time...
+Initializing logger
+2021-01-13 06:46:01,699 | root | INFO | Starting up app insights client
+Starting up app insights client
+2021-01-13 06:46:01,700 | root | INFO | Starting up request id generator
+Starting up request id generator
+2021-01-13 06:46:01,700 | root | INFO | Starting up app insight hooks
+Starting up app insight hooks
+2021-01-13 06:46:01,701 | root | INFO | Invoking user's init function
+Invoking user's init function
+2021-01-13 06:46:10,113 | root | INFO | Users's init has completed successfully
+Users's init has completed successfully
+2021-01-13 06:46:10,117 | root | INFO | Skipping middleware: dbg_model_info as it's not enabled.
+Skipping middleware: dbg_model_info as it's not enabled.
+2021-01-13 06:46:10,117 | root | INFO | Skipping middleware: dbg_resource_usage as it's not enabled.
+Skipping middleware: dbg_resource_usage as it's not enabled.
+2021-01-13 06:46:10,120 | root | INFO | Scoring timeout is found from os.environ: 60000 ms
+Scoring timeout is found from os.environ: 60000 ms
+2021-01-13 06:46:14,580 | root | INFO | 200
+200
+127.0.0.1 - - [13/Jan/2021:06:46:14 +0000] "GET /swagger.json HTTP/1.0" 200 3252 "-" "Go-http-client/1.1"
+2021-01-13 06:48:07,976 | root | INFO | 200
+200
+127.0.0.1 - - [13/Jan/2021:06:48:07 +0000] "GET /swagger.json HTTP/1.0" 200 3252 "-" "Go-http-client/1.1"
+2021-01-13 06:48:12,097 | root | INFO | 200
+200
+127.0.0.1 - - [13/Jan/2021:06:48:12 +0000] "GET /swagger.json HTTP/1.0" 200 3252 "-" "Go-http-client/1.1"
+
