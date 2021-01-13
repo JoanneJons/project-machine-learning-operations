@@ -84,7 +84,7 @@ The pipeline is published using the SDK. Once published, the endpoint details ar
 ![Screenshot](./images/pipeline-endpoint.png)
 
 ## Screen Recording
-Link to the screen recording of the project: 
+[Link to the screen recording of the project](https://youtu.be/2nz4JW99MM8)
 
 ## Standout Suggestions
 
