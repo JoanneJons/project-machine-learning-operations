@@ -43,6 +43,7 @@ A compute cluster was configured for the AutoML run with *Standard_DS12_v2* as t
 The problem statement here is a binary classification problem. So the AutoML experiment is run using *Classification* and the best model is selected.<br>
 **The screenshot below shows that in the experiment, the AutoML run with the bankmarketing data is completed.**<br>
 *The properties section shows the status of the run as 'Completed.'*
+![automl-completed](./images/automl-exp-completed.png)<br><br>
 ![automl-completed](./images/automl-completed.png) <br><br>
 **Choosing the Best Model**<br>
 After the AutoML run completed, the best model summary showed the best run and the algorithm used. Here the best model is a Voting Ensemble model, which had an accuracy of **0.91866**.<br> A Voting Ensemble is a machine learning model that trains on an ensemble of numerous models and predicts an output based on their highest probability of chosen class as input. <br>
